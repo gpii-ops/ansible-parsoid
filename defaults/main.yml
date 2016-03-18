@@ -10,7 +10,7 @@ nodejs_app_name: parsoid
 nodejs_app_install_dir: /opt/{{ nodejs_app_name }}
 nodejs_app_git_repo: https://github.com/wikimedia/parsoid.git
 nodejs_app_git_branch: 5538d868777d2d5abb125dac310550fde3873689
-nodejs_app_commands: {}
+nodejs_app_commands: []
 nodejs_app_start_script: "bin/server.js"
 nodejs_app_host_address: 127.0.0.1
 nodejs_app_tcp_port: 8000

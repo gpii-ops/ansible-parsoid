@@ -7,7 +7,7 @@
 
 - name: Set Parsoid settings file
   template:
-    dest: "{{ nodejs_app_install_dir }}/settings.json"
-    src: settings.json.template
+    dest: "{{ nodejs_app_install_dir }}/localsettings.js"
+    src: localsettings.js.template
   notify: Restart the application systemd unit
 

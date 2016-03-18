@@ -1,8 +1,7 @@
 ---
 
 parsoid_domains:
-  - domain: "localhost"
-    uri: "http://localhost/w/api.php"
+  - localhost: "http://localhost/w/api.php"
 
 # nodejs application configuration for the ansible-nodejs role
 

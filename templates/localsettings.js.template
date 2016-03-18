@@ -18,19 +18,19 @@ exports.setup = function(parsoidConfig) {
 	//parsoidConfig.userAgent = "My-User-Agent-String";
 
 	// Configure Parsoid to point to your MediaWiki instance.
-{% for domain in parsoid_domains %}
+{% for key,value in parsoid_domains.iteritems() %}
 	parsoidConfig.setMwApi({
 		// The "prefix" is the name given to this wiki configuration in the
 		// (deprecated) Parsoid v1 API.
-		prefix: '{{ domain.domain }}', // optional
+		prefix: '{{ key }}', // optional
 		// The "domain" is used for communication with Visual Editor
 		// and RESTBase.  It defaults to the hostname portion of
 		// the `uri` property below, but you can manually set it
 		// to an arbitrary string.
-		domain: '{{ domain.domain }}', // optional
+		domain: '{{ key }}', // optional
 		// This is the only required parameter:
 		// the URL of you MediaWiki API endpoint.
-		uri: '{{ domain.uri }}',
+		uri: '{{ value }}',
 		// To specify a proxy (or proxy headers) specific to this prefix
 		// (which overrides defaultAPIProxyURI). Alternatively, set `proxy`
 		// to `null` to override and force no proxying when a default proxy

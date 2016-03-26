@@ -1,0 +1,13 @@
+---
+
+- name: Install Parsoid node modules locally
+  npm:
+    global: no
+    path: "{{ nodejs_app_install_dir }}"
+
+- name: Set Parsoid settings file
+  template:
+    dest: "{{ nodejs_app_install_dir }}/localsettings.js"
+    src: localsettings.js.template
+  notify: Restart the application systemd unit
+
